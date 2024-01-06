@@ -1,6 +1,10 @@
+'use client'
 import { druk } from '@/utils/fonts'
 import Image from 'next/image'
 import Agent from '../Agent'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+
 export default function Main() {
   const AGENT = {
     uuid: '8e253930-4c05-31dd-1b6c-968525494517',
@@ -68,12 +72,35 @@ export default function Main() {
         </h1>
       </div>
 
-      <div className="flex flex-1 gap-x-4">
-        <Agent agent={AGENT} />
-        <Agent agent={AGENT} />
-        <Agent agent={AGENT} />
-        <Agent agent={AGENT} />
-      </div>
+      <Swiper className="w-full" spaceBetween={16} slidesPerView={4}>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Agent agent={AGENT} />
+        </SwiperSlide>
+      </Swiper>
     </main>
   )
 }
