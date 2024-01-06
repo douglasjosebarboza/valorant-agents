@@ -15,8 +15,9 @@ export const druk = localFont({
     },
     {
       path: '../public/fonts/druk-medium.otf',
-      weight: '500',
-      style: 'medium',
+      weight: '400',
+      style: 'normal',
     },
   ],
+  display: 'swap',
 })
