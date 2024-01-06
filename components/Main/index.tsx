@@ -62,13 +62,13 @@ export default function Main() {
         />
 
         <h1
-          className={`${druk.className} textos-estilizados-vertical ml-8 text-7xl tracking-[12px] text-transparent`}
+          className={`${druk.className} textos-estilizados-vertical-border ml-8 text-7xl tracking-[12px] text-transparent`}
         >
           AGENTES
         </h1>
       </div>
 
-      <div className="flex flex-1 gap-x-4 bg-blue-800">
+      <div className="flex flex-1 gap-x-4">
         <Agent agent={AGENT} />
         <Agent agent={AGENT} />
         <Agent agent={AGENT} />
