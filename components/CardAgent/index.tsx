@@ -1,28 +1,15 @@
-import { druk } from '@/utils/fonts'
 import Image from 'next/image'
+import { druk } from '@/utils/fonts'
+import type Agent from '@/types/agent'
 
-interface AgentProps {
-  agent: {
-    role: {
-      displayName: string
-    }
-    displayName: string
-    abilities: {
-      displayIcon: string
-      displayName: string
-    }[]
-    fullPortrait: string
-  }
-}
-
-export default function Agent({ agent }: AgentProps) {
+export default function CardAgent(agent: Agent) {
   return (
     <a
       className="group relative flex h-[600px] w-[300px] flex-col justify-between fill-transparent grayscale transition-all duration-[0.4s] hover:grayscale-0"
       href="#"
     >
       <div
-        className={`${druk.className} textos-estilizados-vertical z-10 mt-10 flex flex-col gap-y-2 self-start opacity-50 transition-all duration-[0.4s]  group-hover:opacity-100`}
+        className={`${druk.className} textos-estilizados-vertical z-10 ml-2 mt-10 flex flex-col gap-y-1 self-start opacity-50 transition-all duration-[0.4s]  group-hover:opacity-100`}
       >
         <p className="font-normal tracking-[1px] text-[var(--red)]">
           {agent.role.displayName}
