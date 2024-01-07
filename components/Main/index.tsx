@@ -5,7 +5,7 @@ import Agents from '../Agents'
 export default function Main() {
   return (
     <main className="mx-auto my-0 flex w-full max-w-7xl items-center pb-10">
-      <div className="relative mr-6">
+      <div className="mr-6 hidden sm:block">
         <Image
           className="absolute bottom-0 right-0"
           src="/background-logo.svg"
@@ -20,9 +20,7 @@ export default function Main() {
           AGENTES
         </h1>
       </div>
-      <div className="w-full">
-        <Agents />
-      </div>
+      <Agents />
     </main>
   )
 }

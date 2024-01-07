@@ -5,7 +5,7 @@ import type Agent from '@/types/agent'
 export default function CardAgent(agent: Agent) {
   return (
     <a
-      className="group relative flex h-[600px] w-[300px] flex-col justify-between fill-transparent grayscale transition-all duration-[0.4s] hover:grayscale-0"
+      className="group relative flex h-[600px] w-[260px] flex-col justify-between fill-transparent grayscale transition-all duration-[0.4s] hover:grayscale-0"
       href="#"
     >
       <div
