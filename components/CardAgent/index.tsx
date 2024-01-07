@@ -20,16 +20,19 @@ export default function CardAgent(agent: Agent) {
       </div>
 
       <ul className="z-10 flex list-none items-center gap-x-5 self-end rounded-sm border border-solid border-[var(--white)] bg-[var(--black)] p-4">
-        {agent.abilities.map((ability) => (
-          <li key={ability.displayName}>
-            <Image
-              src={ability.displayIcon}
-              width={36}
-              height={36}
-              alt={'Icone da habilidade ' + ability.displayName}
-            />
-          </li>
-        ))}
+        {agent.abilities.map(
+          (ability) =>
+            ability.displayIcon && (
+              <li key={ability.displayName}>
+                <Image
+                  src={ability.displayIcon}
+                  width={36}
+                  height={36}
+                  alt={'Icone da habilidade ' + ability.displayName}
+                />
+              </li>
+            ),
+        )}
       </ul>
 
       <div className="absolute inset-0 m-auto h-[90%] w-[90%] overflow-hidden rounded-xl bg-[var(--black-opacity)] transition-all duration-[0.4s] group-hover:bg-[var(--black)]">
