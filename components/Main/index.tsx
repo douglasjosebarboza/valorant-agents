@@ -1,4 +1,3 @@
-'use client'
 import { druk } from '@/utils/fonts'
 import Image from 'next/image'
 import Agents from '../Agents'

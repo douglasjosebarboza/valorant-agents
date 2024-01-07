@@ -4,18 +4,17 @@ import Agent from '@/types/agent'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useEffect, useState } from 'react'
 import 'swiper/css'
+import { LoadAgents } from '@/utils/loadAgents'
 
 export default function Agents() {
   const [agents, setAgents] = useState<Agent[]>([])
-  const LoadAgents = async () => {
-    const route = 'https://valorant-api.com/v1/agents?language=pt-BR'
-    const response = await fetch(route).then((data) => data.json())
-    const data = response.data as Agent[]
-    setAgents(data.filter((agents) => agents.fullPortrait))
+  const LoadData = async () => {
+    const data = await LoadAgents()
+    setAgents(data)
   }
 
   useEffect(() => {
-    LoadAgents()
+    LoadData()
   }, [])
   return (
     <Swiper spaceBetween={16} slidesPerView={4}>
